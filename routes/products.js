@@ -17,7 +17,7 @@ module.exports = function (db) {
     const keywords = req.query.keywords.split(" ");
     const result = db.get("products").filter((_) => {
       const fullText = _.description + _.name + _.color;
-      return keywords.every(() => fullText.indexOf() !== -1);
+      return keywords.every((_) => fullText.indexOf(_) !== -1);
     });
     res.send(result);
   });
@@ -46,18 +46,18 @@ module.exports = function (db) {
     res.send(results);
   });
 
-  router.patch("/products/:id", (req, res) => {
+  router
+  .route("/products/:id")
+  .patch((req, res) => {
     res.send(
       db.get("products").find({ id: req.params.id }).assign(req.body).write()
     );
-  });
-
-  router.delete("/products/:id", (req, res) => {
+  })
+  .delete((req, res) => {
     db.get("products").remove({ id: req.params.id }).write();
     res.status(204).send();
-  });
-
-  router.get("/products/:id", (req, res) => {
+  })
+  .get((req, res) => {
     const result = db.get("products").find({ id: req.params.id }).value();
     if (result) {
       res.send(result);

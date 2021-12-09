@@ -6,7 +6,7 @@ document.getElementById("search").onclick = function () {
   if (priceValue === "" && colorValue === "") {
     axios.get(`/api/products/search?keywords=${textValue}`).then(showResults);
   } else {
-    let rootQuery = `/api/products/detailsSearch?`;
+    let rootQuery = `/api/products/detailSearch?`;
     let priceQuery = "";
     let colorQuery = "";
 

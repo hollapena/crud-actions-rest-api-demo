@@ -31,6 +31,14 @@
       "description": "They zip and keep you warm.",
       "color": "Grey",
       "id": "1740b6cc-0172-426c-9614-b30e23c71c99"
+    },
+    {
+      "name": "Rain Jacket",
+      "price": "25.99",
+      "quantity": "98",
+      "description": "Waterproof jacket for rainy days.",
+      "color": "red",
+      "id": "a42e53e8-46a2-4f98-9940-7cec23fd5535"
     }
   ]
 }

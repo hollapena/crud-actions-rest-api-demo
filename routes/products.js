@@ -14,10 +14,10 @@ module.exports = function (db) {
     });
 
   router.route("/products/search").get((req, res) => {
-    const keywords = req.query.keywords;
+    const keywords = req.query.keywords.split(" ");
     const result = db.get("products").filter((_) => {
       const fullText = _.description + _.name + _.color;
-      return fullText.indexOf(keywords) !== -1;
+      return keywords.every(() => fullText.indexOf() !== -1);
     });
     res.send(result);
   });
@@ -28,10 +28,22 @@ module.exports = function (db) {
     const results = db.get("products").filter((_) => {
       return Object.keys(query).reduce((found, key) => {
         const obj = query[key];
-        found = found && _[key] == obj.val;
+        switch (obj.op) {
+          case "lt":
+            found = found && _[key] < obj.val;
+            break;
+          case "eq":
+            found = found && _[key] == obj.val;
+            break;
+          default:
+            found = found && _[key].indexOf(obj.val) !== -1;
+            break;
+        }
         return found;
+        
       }, true);
     });
+    res.send(results);
   });
 
   router.patch("/products/:id", (req, res) => {

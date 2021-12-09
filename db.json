@@ -1,0 +1,36 @@
+{
+  "products": [
+    {
+      "name": "Essential Backpacks",
+      "price": 259.99,
+      "quantity": 5,
+      "color": "orange",
+      "id": "0124081a-4daa-425a-bb40-d5c016893fe3",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue. Risus quis varius quam quisque. Quis risus sed vulputate odio. Ultrices eros in cursus turpis. Est velit egestas dui id ornare arcu. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Dictumst quisque sagittis purus sit amet volutpat. Sed libero enim sed faucibus turpis in eu. Dui vivamus arcu felis bibendum ut tristique et egestas."
+    },
+    {
+      "name": "Hiking Boots",
+      "price": "75.00",
+      "quantity": "5",
+      "description": "These are great!",
+      "color": "Brown",
+      "id": "baf64fc1-c6ef-4e1d-8a40-1dbd7eb0f04c"
+    },
+    {
+      "name": "Kayak",
+      "price": "300.00",
+      "quantity": "3",
+      "description": "They float...or at least we hope they do!",
+      "color": "Blue",
+      "id": "50a44855-cd19-431e-a62e-dcbd68d86eda"
+    },
+    {
+      "name": "Patagonia Better Sweater",
+      "price": "80.00",
+      "quantity": "23",
+      "description": "They zip and keep you warm.",
+      "color": "Grey",
+      "id": "1740b6cc-0172-426c-9614-b30e23c71c99"
+    }
+  ]
+}
